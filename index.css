@@ -176,29 +176,14 @@ img{
 
 .slideshow-container {
     background-color: #FAF9F7;
-    width: 100%;
-    max-width: 1200px;
+    max-width: 500px;
     position: relative;
-    margin: 0 auto 30px;
-    overflow: hidden;
-}
-
-.slideshow-container img {
-    width: 100%;
-    height: auto;
-    display: block;
-    object-fit: cover;
-    max-height: 560px;
+    margin: auto;
 }
 
 /* Style for individual slides */
 .mySlides {
     display: none;
-}
-
-.dot-container {
-    text-align: center;
-    padding: 10px 0 22px;
 }
 
 /* Style for the slideshow navigation dots */

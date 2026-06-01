@@ -6,7 +6,7 @@
         const submenu = document.querySelector(".submenu");
         const submenuLink = submenu ? submenu.querySelector("a") : null;
         const slides = Array.from(document.querySelectorAll(".mySlides"));
-        let dots = Array.from(document.querySelectorAll(".dot"));
+        const dots = Array.from(document.querySelectorAll(".dot"));
         let slideIndex = 0;
         let slideTimer = null;
 
@@ -65,26 +65,6 @@
             dots.forEach(function (dot, index) {
                 dot.classList.toggle("active", index === slideIndex);
             });
-        }
-
-        function maybeCreateDots() {
-            const dotContainer = document.querySelector(".dot-container");
-
-            if (!dotContainer || dots.length === slides.length) {
-                return;
-            }
-
-            dotContainer.innerHTML = "";
-            slides.forEach(function (_, index) {
-                const dot = document.createElement("span");
-                dot.className = "dot";
-                dot.addEventListener("click", function () {
-                    stopSlideshow();
-                    showSlide(index);
-                });
-                dotContainer.append(dot);
-            });
-            dots = Array.from(document.querySelectorAll(".dot"));
         }
 
         function startSlideshow() {
@@ -204,7 +184,6 @@
         });
 
         if (slides.length) {
-            maybeCreateDots();
             startSlideshow();
 
             document.addEventListener("visibilitychange", function () {
