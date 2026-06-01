@@ -20,9 +20,12 @@ jobs:
 
       - name: Build site
         run: |
-          # Replace this with your actual build command, e.g., npm run build, jekyll build, etc.
-          mkdir _site
-          echo '<h1>Hello from GitHub Pages!</h1>' > _site/index.html
+          # Copy all static files to _site directory
+          mkdir -p _site
+          cp -r *.html _site/
+          cp -r *.css _site/
+          cp -r *.js _site/
+          cp -r selectedPics _site/ 2>/dev/null || true
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v4
