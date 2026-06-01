@@ -1,0 +1,407 @@
+body {
+    font-family: Graphik Web;
+    margin: 0;
+    padding-top: 50px;
+}
+
+#homeLink {
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit the text color from the parent element */
+}
+
+/********************* Menu Code *******************************/
+.menuContainer {
+    display: flex;
+    justify-content: space-between; /* Align items to the start and end of the container */
+    align-items: center;
+    background-color: #D3D3D3;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.itemMenu {
+    display: flex;
+    align-items: center;
+}
+
+.itemHeading {
+    flex-grow: 1; /* Allow the heading to take up available space */
+    text-align: center; /* Center-align the text */
+    padding: 0 20px; /* Adjust padding as needed */
+}
+
+/* Add media query for responsiveness */
+@media screen and (max-width: 768px) {
+    .itemHeading {
+        padding: 0 10px; /* Adjust padding for smaller screens */
+    }
+    .hamburger {
+        padding: 0 10px; /* Adjust padding for smaller screens */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .menu {
+        width: 100%; /* Full width on very small screens */
+        position: static;
+        box-shadow: none;
+    }
+    .menu a {
+        padding: 10px; /* Adjust padding for smaller screens */
+        text-align: center; /* Center-align menu items */
+        display: block;
+    }
+}
+
+/* Add some basic styles to the hamburger icon */
+.hamburger {
+    cursor: pointer;
+    display: inline-block;
+    padding: 0 15px;
+    transition: transform 0.3s; /* Add a transition for smooth icon change */
+}
+
+.bar {
+    width: 35px;
+    height: 4px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.hamburger.active {
+    background-color: transparent;
+}
+
+/* Rotate bars to create an 'X' icon when menu is open */
+.hamburger.active .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/***********Hamburger styles End*/
+
+/* Style for the menu that appears when the hamburger icon is clicked */
+.menu {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.menu a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #333;
+}
+
+/* Style for the submenu (tables) */
+.submenu .sub-submenu {
+    display: none;
+    position: absolute;
+    background-color: #D3D3D3;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    white-space: nowrap;
+    padding: 10px;
+    left: 100%;
+    top: 90px;
+}
+/* Adjust the margin-top as needed */
+.submenu.active + .menu {
+    padding-top: 20px; /* Adjust as needed */
+}
+
+/* Indent Tables Subcategories */
+.sub-submenu {
+    padding-left: 0; /* Adjust as needed */
+}
+.submenu:hover .sub-submenu {
+    display: block;
+}
+
+/* Show the main menu when the anchor is clicked */
+.hamburger.active + .menu {
+    display: block;
+    transform: translateY(0); /* Add a transition for smooth dropdown */
+}
+
+/* Show the submenu when the Table link is clicked */
+.menu .submenu.active .sub-submenu {
+    display: block;
+}
+/* Show the menu when the anchor is clicked */
+.hamburger.active + .menu {
+    display: block;
+    transform: translateY(0); /* Add a transition for smooth dropdown */
+}
+
+/****************************** Menu End *******************/
+
+/************* Tables Section - Start *****************/
+.miniContainer {
+    width: 100%;
+    flex-grow: 1; /* Allow the heading to take up available space */
+    padding-left: 45%;
+    top: 15%;
+    position: fixed;
+    background-color: rgba(211, 211, 211, .4);
+    text-align: center;
+    padding: 5px; /* Add padding for spacing */
+}
+
+.miniContainer a {
+    text-decoration: none;
+    color: grey;
+}
+
+#end {
+    padding-left: 50%;
+}
+
+#endTables, #nestTables {
+    padding-top: 35px;
+    color: gray;
+}
+
+/* Media query for screens smaller than 768px */
+@media screen and (max-width: 768px) {
+    .golden-block {
+        margin-left: 0; /* Reset margin for smaller screens */
+        margin-top: 10px; /* Add some spacing between the text and block */
+    }
+    .text1, .text2 {
+        padding-left: 20%; /* Adjust padding for smaller screens */
+        text-align: center; /* Center-align text for smaller screens */
+    }
+    .miniContainer {
+        text-align: center; 
+        position: relative; /* Change to relative positioning */ 
+        top: auto; /* Reset top positioning */ 
+        padding: 10px;
+        margin-top: 50px;
+    }
+    #end {
+        padding-left: 0; /* Reset padding for smaller screens */
+        text-align: center; /* Center-align text for smaller screens */
+    }
+}
+
+.text1 {
+    padding-top: 45px;
+    padding-left: 30%;
+    line-height: 0.5;
+}
+
+.text2 {
+    padding-left: 43%;
+    line-height: 0.5;
+}
+
+.tables-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: last baseline;
+}
+
+.tables-img {
+    flex: 0 0 calc(33.333% - 20px); /* Adjust the width as needed */
+    margin: 10px;
+    text-align: center;
+}
+
+.tables-img img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Style the text below each image */
+.text h2 {
+    margin: 0; /* Remove any margin around the h2 element */
+}
+
+.text p {
+    margin: 0; /* Remove any margin around the p element */
+}
+
+.tableProduct-content {
+    line-height: .5;
+}
+
+.tableProduct-content p {
+    text-align: left; /* Align text to the left */
+    margin-top: 5px; /* Add some space between lines */
+}
+
+/* Style the second line common for all images */
+.tableProduct-content p:last-child {
+    font-style: italic; /* Add italic style to the last paragraph */
+    color: #666; /* Change text color for the last paragraph */
+}
+
+.tableProduct-content {
+    margin-top: 10px;
+}
+
+/* Media query for responsiveness */
+@media screen and (max-width: 768px) {
+    .tables-img {
+        flex: 0 0 calc(50% - 10px); /* Adjust width for smaller screens */
+        margin: 5px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .tables-img {
+        flex: 0 0 100%; /* Full width for very small screens */
+        margin: 5px 0;
+    }
+
+    .tableProduct-content p {
+        text-align: center; /* Center-align text for smaller screens */
+    }
+}
+
+/********** Tables Section - End *****************/
+
+/* Footer Styles */
+footer {
+    background-color: #D3D3D3;
+    color: #0c0c0c;
+}
+
+.footer-columns {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.footer-column {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+.email-section {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+/* Styles for the email placeholder */
+.email-section .email-placeholder {
+    background-color: #D3D3D3;
+    display: flex;
+    align-items: center;
+}
+
+.email-placeholder input[type="email"] {
+    width: 50%;
+    margin-left: 20px;
+    padding: 15px;
+    border: 1px so #fff;
+    color: #0b0b0b;
+}
+
+.email-placeholder button[type="submit"] {
+    background-color: #707070;
+    border: none;
+    padding: 16px 35px;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin-left: 10px;
+}
+
+.email-placeholder button[type="submit"]:hover {
+    background-color: #b2b1b1;
+    color: black;
+}
+
+/* text elements do not overlap and are displayed correctly on smaller screens */
+.text1 h2, .text1 p {
+    margin: 0; /* Remove default margin */
+}
+
+.text1 {
+    padding-top: 45px;
+    margin-left: 1%;
+    line-height: 1.5; /* Add line height to space out text */
+}
+
+/* SOCIAL MEDIA ICONS */
+
+.social-icons {
+    display: flex;
+    justify-content: center; /* Center-align the social icons */
+    gap: 20px; /* Add some space between icons */
+}
+
+.social-icon {
+    position: relative;
+    text-decoration: none;
+    color: #333;
+}
+
+.hover-message {
+    visibility: hidden; /* Hide the message initially */
+    opacity: 0; /* Make the message invisible initially */
+    transition: visibility 0s, opacity 0.5s linear; /* Smooth transition */
+    position: absolute;
+    top: 100%; /* Position the message below the icon */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #f2f2f2; /* Background color for the message */
+    padding: 5px;
+    border-radius: 5px; /* Optional: rounded corners */
+    white-space: nowrap; /* Prevent text from wrapping */
+}
+
+.social-icon:hover .hover-message {
+    visibility: visible; /* Show the message on hover */
+    opacity: 1; /* Make the message visible on hover */
+}
+
+
+/* Media query for screens smaller than 768px */
+@media screen and (max-width: 768px) {
+    .text1 {
+        padding-left: 10%; /* Adjust padding for smaller screens */
+        padding-right: 10%; /* Add padding to the right for balance */
+        text-align: center; /* Center-align text for smaller screens */
+        line-height: 1.5; /* Ensure line height is maintained */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .text1 h2 {
+        font-size: 1.2em; /* Adjust font size for very small screens */
+    }
+    .text1 p {
+        font-size: 1em; /* Adjust font size for very small screens */
+    }
+}

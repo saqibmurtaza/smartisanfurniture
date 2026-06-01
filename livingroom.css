@@ -1,0 +1,338 @@
+body {
+    font-family: Graphik Web;
+    margin: 0;
+    padding-top: 50px;
+}
+
+#homeLink {
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit the text color from the parent element */
+}
+
+/********************* Menu Code*******************************/
+.menuContainer {
+    display: flex;
+    justify-content: space-between; /* Align items to the start and end of the container */
+    align-items: center;
+    background-color: #D3D3D3;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.itemMenu {
+    display: flex;
+    align-items: center;
+}
+
+.itemHeading {
+    flex-grow: 1; /* Allow the heading to take up available space */
+    text-align: center; /* Center-align the text */
+    padding: 0 20px; /* Adjust padding as needed */
+}
+
+/* Add media query for responsiveness */
+@media screen and (max-width: 768px) {
+    .itemHeading {
+        padding: 0 10px; /* Adjust padding for smaller screens */
+    }
+}
+
+/* Add some basic styles to the hamburger icon */
+.hamburger {
+    cursor: pointer;
+    display: inline-block;
+    padding: 0 15px;
+    transition: transform 0.3s; /* Add a transition for smooth icon change */
+}
+
+.bar {
+    width: 35px;
+    height: 4px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.hamburger.active {
+    background-color: transparent;
+}
+
+/* Rotate bars to create an 'X' icon when menu is open */
+.hamburger.active .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/***********Hamburger styles End*/
+
+/* Style for the menu that appears when the hamburger icon is clicked */
+.menu {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.menu a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #333;
+}
+
+/* Style for the submenu (tables) */
+.submenu .sub-submenu {
+    display: none;
+    position: absolute;
+    background-color: #D3D3D3;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    white-space: nowrap;
+    padding: 10px;
+    left: 100%;
+    top: 90px;
+}
+
+/* Adjust the margin-top as needed */
+.submenu.active + .menu {
+    padding-top: 20px; /* Adjust as needed */
+}
+
+/* Indent Tables Subcategories */
+.sub-submenu {
+    padding-left: 0; /* Adjust as needed */
+}
+
+.submenu:hover .sub-submenu {
+    display: block;
+}
+
+/* Show the main menu when the anchor is clicked */
+.hamburger.active + .menu {
+    display: block;
+    transform: translateY(0); /* Add a transition for smooth dropdown */
+}
+
+/* Show the submenu when the Table link is clicked */
+.menu .submenu.active .sub-submenu {
+    display: block;
+}
+
+/* Show the menu when the anchor is clicked */
+.hamburger.active + .menu {
+    display: block;
+    transform: translateY(0); /* Add a transition for smooth dropdown */
+}
+
+/****************************** Menu End *******************/
+
+/************* Tables Section - Start *****************/
+
+/* Reset default margin and padding */
+* {
+    box-sizing: border-box;
+}
+
+main {
+    padding: 40px;
+}
+
+main h2 {
+    text-align: center;
+}
+
+main p {
+    text-align: center;
+}
+
+.tables-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: last baseline;
+}
+
+.tables-img {
+    flex: 0 0 calc(33.333% - 20px); /* Adjust the width as needed */
+    margin: 10px;
+    text-align: center;
+}
+
+.tables-img img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Style the text below each image */
+.text {
+    padding-bottom: 10px;
+    line-height: 0.5;
+}
+
+.tableProduct-content {
+    line-height: 0.5;
+}
+
+.tableProduct-content p {
+    text-align: left; /* Align text to the left */
+    margin-top: 5px; /* Add some space between lines */
+}
+
+/* Style the second line common for all images */
+.tableProduct-content p:last-child {
+    font-style: italic; /* Add italic style to the last paragraph */
+    color: #666; /* Change text color for the last paragraph */
+}
+
+.tableProduct-content {
+    margin-top: 10px;
+}
+
+/* Media query for responsiveness */
+@media screen and (max-width: 768px) {
+    .tables-img {
+        flex: 0 0 calc(50% - 10px); /* Adjust width for smaller screens */
+        margin: 5px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .tables-img {
+        flex: 0 0 100%; /* Full width for very small screens */
+        margin: 5px 0;
+    }
+
+    .tableProduct-content p {
+        text-align: center; /* Center-align text for smaller screens */
+    }
+}
+
+/********** Tables Section - End *****************/
+
+/* Footer Styles */
+footer {
+    background-color: #D3D3D3;
+    color: #0c0c0c;
+}
+
+.footer-columns {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.footer-column {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+.email-section {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+/* Styles for the email placeholder */
+.email-section .email-placeholder {
+    background-color: #D3D3D3;
+    display: flex;
+    align-items: center;
+}
+
+.email-placeholder input[type="email"] {
+    width: 50%;
+    margin-left: 20px;
+    padding: 15px;
+    border: 1px solid #050505;
+    color: #0b0b0b;
+}
+
+.email-placeholder button[type="submit"] {
+    background-color: #707070;
+    border: none;
+    padding: 16px 35px;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin-left: 10px;
+}
+
+.email-placeholder button[type="submit"]:hover {
+    background-color: #b2b1b1;
+    color: black;
+}
+
+.social-icons {
+    background-color: #D3D3D3;
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.social-icon {
+    text-decoration: none;
+    color: #333;
+    margin: 10px;
+    position: relative;
+    transition: opacity 0.3s;
+}
+
+/* Style for the message */
+.hover-message {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 5px 10px;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+}
+
+.social-icon:hover .hover-message {
+    opacity: 1;
+}
+
+.social-icon:hover i {
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+@media (max-width: 768px) {
+    .social-icon .hover-message {
+        display: none;
+    }
+}
+
+/*************************ABOUT SECTION****************************/
+.about {
+    margin: 30px;
+    width: 850px;
+    text-align: justify;
+}

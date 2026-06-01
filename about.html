@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Furniture Store</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="https://kit.fontawesome.com/9964243f66.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header class="menuContainer">
+        <div class="itemMenu">
+            <!-- Checkbox input for toggling the menu -->
+            <a href="#" class="hamburger" onclick="toggleMenu(event)">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </a>        
+            <!-- The menu -->
+            <div id="menu" class="menu">
+                <a href="index.html">Home</a>
+                <a href="livingroom.html">Living Room</a>
+                <div class="submenu">
+                    <a href="#">Tables</a>
+                    <div class="sub-submenu">
+                        <a href="accenttables.html">Accent Tables</a>
+                        <a href="diningtables.html">Dining Tables</a>
+                        <a href="consoles.html">Console Tables</a>    
+                    </div>
+                </div>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>        
+        
+        <div class="itemHeading">
+            <a id="homeLink" href="index.html"><h1>J's Furniture</h1></a>
+        </div>
+    </header>
+    <div class="about">
+        <p>After completing my business studies, 
+            I started my career as a Banker in 1996. 
+            I worked in different departments of banks 
+            and was promoted to AVP. My banking experience 
+            spans over 10 years, after which I switched my 
+            career and started business. I established a 
+            furniture manufacturing unit in 2006 with the name of J’s furniture.
+            <br><br>
+            Since we started, our mission has always been to provide our 
+            clients with the highest quality products and customer service, 
+            while maintaining a completely competitive price. 
+            <br><br>
+            J’s proudly design and develop an entire range of furniture products 
+            in Pakistan. The upholstered products, which include sofas, 
+            chairs, ottomans, sofa-beds, and beds, are also exclusive to 
+            J's range. <br> <br>We combine creativity, craftsmanship and technology 
+            to create furniture suited for discerning customers, locally 
+            and internationally. <br> <br>We have gained considerable experience 
+            dealing with diverse customers including designers, architects, 
+            professionals, and both local and foreign customers.
+            </p>
+    </div>
+    
+    <script>
+        function toggleMenu(event) {
+        event.preventDefault(); // Prevent the default anchor behavior
+        var hamburger = document.querySelector(".hamburger");
+        var menu = document.getElementById("menu");
+        hamburger.classList.toggle("active"); // Toggle the 'active' class on the hamburger
+        menu.classList.toggle("active"); // Toggle the 'active' class on the menu
+    }
+    </script>
+<script src="index.js"></script>
+</body>
+<!-- Footer -->
+<footer>
+    <div class="footer-columns">
+        <div class="footer-column">
+            <ul>
+                <li><a href="about.html">Our Story</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <ul>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="terminology.html">Furniture Terminology</a></li>
+                </ul>
+        </div>
+        <div class="footer-column">
+            <ul>
+                <li><a href="map.html">Location Map</a></li>
+                <li><a href="terms.html">Terms and Conditions</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="email-section">
+        <div class="email-placeholder">
+            <input type="email" placeholder="Enter your email">
+            <button type="submit">Sign Up</button>
+        </div>
+    
+    </div>
+
+        <div class="social-icons">
+            <a href="https://www.facebook.com/jawad.furniture" target="_blank" class="social-icon">
+                <i class="fab fa-facebook-f"></i>
+                <span class="hover-message">J's on Facebook</span>
+            </a>
+            <a href="https://www.instagram.com/jawad.furniture" target="_blank" class="social-icon">
+                <i class="fab fa-instagram"></i>
+                <span class="hover-message">J's on Instagram</span>
+            </a>
+            <a href="https://www.tiktok.com/@jawadfurniture" target="_blank" class="social-icon">
+                <i class="fab fa-tiktok"></i>
+                <span class="hover-message">J's on TikTok</span>
+            </a>
+        </div>
+        
+        
+
+</footer>
+</html>

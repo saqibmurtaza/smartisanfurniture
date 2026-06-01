@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Furniture Store</title>
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="https://kit.fontawesome.com/9964243f66.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header class="menuContainer">
+        <div class="itemMenu">
+            <!-- Checkbox input for toggling the menu -->
+            <a href="#" class="hamburger" onclick="toggleMenu(event)">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </a>        
+            <!-- The menu -->
+            <div id="menu" class="menu">
+                <a href="index.html">Home</a>
+                <a href="livingroom.html">Living Room</a>
+                <div class="submenu">
+                    <a href="#">Tables</a>
+                    <div class="sub-submenu">
+                        <a href="accenttables.html">Accent Tables</a>
+                        <a href="diningtables.html">Dining Tables</a>
+                        <a href="consoles.html">Console Tables</a>    
+                    </div>
+                </div>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>        
+        
+        <div class="itemHeading">
+            <a id="homeLink" href="index.html"><h1>J's Furniture</h1></a>
+        </div>
+    </header>
+
+    <main>
+        <section class="contact-info">
+            <h2>Contact Information</h2>
+            <p><strong>Email:</strong> jawadkhaliqkhan@yahoo.com</p>
+            <p><strong>Phone:</strong> +92 (333) 9133828</p>
+            <p><strong>Phone:</strong> +92 (345) 9433828</p>
+            <p><strong>Address:</strong> Tehkal Insdustrial Estate, Tambwano Mor, opposite to Amin Flats, Tehkal Bala, Peshawar</p>
+        </section>
+
+        <section class="contact-form">
+            <h2>Contact Form</h2>
+            <form action="process_contact.php" method="post">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message">Your Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+                
+                <button type="submit">Send</button>
+            </form>
+        </section>
+    </main>
+
+    <script>
+        function toggleMenu(event) {
+        event.preventDefault(); // Prevent the default anchor behavior
+        var hamburger = document.querySelector(".hamburger");
+        var menu = document.getElementById("menu");
+        hamburger.classList.toggle("active"); // Toggle the 'active' class on the hamburger
+        menu.classList.toggle("active"); // Toggle the 'active' class on the menu
+    }
+    </script>
+<script src="index.js"></script>
+</body>
+<!-- Footer -->
+<footer>
+    <div class="footer-columns">
+        <div class="footer-column">
+            <ul>
+                <li><a href="about.html">Our Story</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <ul>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="terminology.html">Furniture Terminology</a></li>
+                </ul>
+        </div>
+        <div class="footer-column">
+            <ul>
+                <li><a href="map.html">Location Map</a></li>
+                <li><a href="terms.html">Terms and Conditions</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="email-section">
+        <div class="email-placeholder">
+            <input type="email" placeholder="Enter your email">
+            <button type="submit">Sign Up</button>
+        </div>
+    
+    </div>
+
+        <div class="social-icons">
+            <a href="https://www.facebook.com/jawad.furniture" target="_blank" class="social-icon">
+                <i class="fab fa-facebook-f"></i>
+                <span class="hover-message">J's on Facebook</span>
+            </a>
+            <a href="https://www.instagram.com/jawad.furniture" target="_blank" class="social-icon">
+                <i class="fab fa-instagram"></i>
+                <span class="hover-message">J's on Instagram</span>
+            </a>
+            <a href="https://www.tiktok.com/@jawadfurniture" target="_blank" class="social-icon">
+                <i class="fab fa-tiktok"></i>
+                <span class="hover-message">J's on TikTok</span>
+            </a>
+        </div>
+        
+        
+
+</footer>
+</html>

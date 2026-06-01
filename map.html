@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Furniture Store</title>
+    <link rel="stylesheet" href="map.css">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="https://kit.fontawesome.com/9964243f66.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header class="menuContainer">
+        <div class="itemMenu">
+            <!-- Checkbox input for toggling the menu -->
+            <a href="#" class="hamburger" onclick="toggleMenu(event)">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </a>        
+            <!-- The menu -->
+            <div id="menu" class="menu">
+                <a href="index.html">Home</a>
+                <a href="livingroom.html">Living Room</a>
+                <div class="submenu">
+                    <a href="#">Tables</a>
+                    <div class="sub-submenu">
+                        <a href="accenttables.html">Accent Tables</a>
+                        <a href="diningtables.html">Dining Tables</a>
+                        <a href="consoles.html">Console Tables</a>    
+                    </div>
+                </div>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>        
+        
+        <div class="itemHeading">
+            <a id="homeLink" href="index.html"><h1>J's Furniture</h1></a>
+        </div>
+    </header>
+
+    <main>
+        <div id="map-button">
+            <button id="openMapButton">Open in Google Maps</button>
+        </div>
+        <p>Tehkal Industrial Estate Near Dam Pukh Restaurant Tambwano mor, opposite to Amin Flats, Tehkal Bala, Peshawar</p>
+        
+        <!-- Google Maps iframe with a different location (ignore this) -->
+        <iframe
+            id="map" 
+            width="600"
+            height="450"
+            frameborder="0"
+            style="border: 0"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d34.00912556432935!2d71.5120470082091!3d15.1234567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNcKwMzEnMTYuNiJTIDE1wrAwOScwMi45Ilc!5e0!3m2!1sen!2sus"
+            allowfullscreen
+        ></iframe>
+    </main>
+
+    <!-- JavaScript to open Google Maps with the desired latitude and longitude -->
+    <script>
+        var openMapButton = document.querySelector("#openMapButton");
+
+        openMapButton.addEventListener("click", function () {
+            var latitude = 15.1234567; // Your actual latitude
+            var longitude = 71.5120470082091; // Your actual longitude
+            var mapUrl = `https://www.google.com/maps?q=Dam Pukh, Tambwano mor, Tehkal Bala, Peshawar, Pakistan&ll=${latitude},${longitude}`;
+        
+            window.open(mapUrl);
+        });
+
+        function toggleMenu(event) {
+            event.preventDefault(); // Prevent the default anchor behavior
+            var hamburger = document.querySelector(".hamburger");
+            var menu = document.getElementById("menu");
+            hamburger.classList.toggle("active"); // Toggle the 'active' class on the hamburger
+            menu.classList.toggle("active"); // Toggle the 'active' class on the menu
+        }
+    </script>
+
+    <!-- Footer -->
+<footer>
+    <div class="footer-columns">
+        <div class="footer-column">
+            <ul>
+                <li><a href="about.html">Our Story</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <ul>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="terminology.html">Furniture Terminology</a></li>
+                </ul>
+        </div>
+        <div class="footer-column">
+            <ul>
+                <li><a href="map.html">Location Map</a></li>
+                <li><a href="terms.html">Terms and Conditions</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="email-section">
+        <div class="email-placeholder">
+            <input type="email" placeholder="Enter your email">
+            <button type="submit">Sign Up</button>
+        </div>
+    
+    </div>
+
+        <div class="social-icons">
+            <a href="https://www.facebook.com/jawad.furniture" target="_blank" class="social-icon">
+                <i class="fab fa-facebook-f"></i>
+                <span class="hover-message">J's on Facebook</span>
+            </a>
+            <a href="https://www.instagram.com/jawad.furniture" target="_blank" class="social-icon">
+                <i class="fab fa-instagram"></i>
+                <span class="hover-message">J's on Instagram</span>
+            </a>
+            <a href="https://www.tiktok.com/@jawadfurniture" target="_blank" class="social-icon">
+                <i class="fab fa-tiktok"></i>
+                <span class="hover-message">J's on TikTok</span>
+            </a>
+        </div>
+        
+        
+
+</footer>
+<script src="index.js"></script>
+</html>

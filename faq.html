@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Furniture Store</title>
+    <link rel="stylesheet" href="faq.css">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="https://kit.fontawesome.com/9964243f66.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header class="menuContainer">
+        <div class="itemMenu">
+            <!-- Checkbox input for toggling the menu -->
+            <a href="#" class="hamburger" onclick="toggleMenu(event)">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </a>        
+            <!-- The menu -->
+            <div id="menu" class="menu">
+                <a href="index.html">Home</a>
+                <a href="livingroom.html">Living Room</a>
+                <div class="submenu">
+                    <a href="#">Tables</a>
+                    <div class="sub-submenu">
+                        <a href="accenttables.html">Accent Tables</a>
+                        <a href="diningtables.html">Dining Tables</a>
+                        <a href="consoles.html">Console Tables</a>    
+                    </div>
+                </div>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>        
+        
+        <div class="itemHeading">
+            <a id="homeLink" href="index.html"><h1>J's Furniture</h1></a>
+        </div>
+    </header>
+    <!-- Main Content -->
+
+    <main>
+        <section class="faq">
+            <h2>Frequently Asked Questions</h2>
+            
+            <div class="faq-item">
+                <h3>1. What is the history of J's Furniture?</h3>
+                <p>J's Furniture was established in 2006 by our founder, who had over 10 years of experience in the banking industry. The company's mission has always been to provide high-quality furniture products and exceptional customer service while offering competitive prices.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>2. What types of furniture does J's Furniture offer?</h3>
+                <p>J's Furniture offers a wide range of furniture products, including sofas, chairs, ottomans, sofa-beds, and beds. Our upholstered products are exclusive to the J's Furniture range.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>3. What sets J's Furniture apart from other furniture manufacturers?</h3>
+                <p>We distinguish ourselves by combining creativity, craftsmanship, and technology to create furniture tailored for discerning customers, both locally and internationally.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>4. Who are your typical customers?</h3>
+                <p>We serve a diverse customer base, including designers, architects, professionals, and both local and foreign customers.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>5. What are your payment terms for orders?</h3>
+                <p>We require a 50% advance payment to proceed with orders. The full payment is due upon delivery.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>6. How can I place an order with J's Furniture?</h3>
+                <p>You can contact us via phone, WhatsApp, email, or by visiting our factory to place an order. We encourage discussing and finalizing the specifications of your items through messages as evidence to avoid any design inconveniences.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>7. Is the advance payment refundable if I cancel my order?</h3>
+                <p>Unfortunately, the advance payment is non-refundable if an order is canceled.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>8. Do you offer delivery services?</h3>
+                <p>Yes, we provide delivery services throughout Pakistan. The delivery charges are borne by the client.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>9. What payment methods do you accept?</h3>
+                <p>We accept payments via bank transfer, EasyPaisa, Jazz, and cash, whichever is convenient for the client.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>10. Who is responsible for any breakage during delivery?</h3>
+                <p>The owner is not responsible for any breakage that occurs during delivery.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>11. What should I do to ensure the proper specifications of my furniture order?</h3>
+                <p>It's important to provide written specifications before placing an order to avoid any misunderstandings. The owner is not responsible if proper specs are not conveyed.</p>
+            </div>
+
+            <!-- Add more FAQ items here as needed -->
+            
+        </section>
+    </main>
+    <script>
+        function toggleMenu(event) {
+        event.preventDefault(); // Prevent the default anchor behavior
+        var hamburger = document.querySelector(".hamburger");
+        var menu = document.getElementById("menu");
+        hamburger.classList.toggle("active"); // Toggle the 'active' class on the hamburger
+        menu.classList.toggle("active"); // Toggle the 'active' class on the menu
+    }
+    </script>
+<script src="index.js"></script>
+</body>
+<!-- Footer -->
+<footer>
+    <div class="footer-columns">
+        <div class="footer-column">
+            <ul>
+                <li><a href="about.html">Our Story</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <ul>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="terminology.html">Furniture Terminology</a></li>
+                </ul>
+        </div>
+        <div class="footer-column">
+            <ul>
+                <li><a href="map.html">Location Map</a></li>
+                <li><a href="terms.html">Terms and Conditions</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="email-section">
+        <div class="email-placeholder">
+            <input type="email" placeholder="Enter your email">
+            <button type="submit">Sign Up</button>
+        </div>
+    
+    </div>
+
+        <div class="social-icons">
+            <a href="https://www.facebook.com/jawad.furniture" target="_blank" class="social-icon">
+                <i class="fab fa-facebook-f"></i>
+                <span class="hover-message">J's on Facebook</span>
+            </a>
+            <a href="https://www.instagram.com/jawad.furniture" target="_blank" class="social-icon">
+                <i class="fab fa-instagram"></i>
+                <span class="hover-message">J's on Instagram</span>
+            </a>
+            <a href="https://www.tiktok.com/@jawadfurniture" target="_blank" class="social-icon">
+                <i class="fab fa-tiktok"></i>
+                <span class="hover-message">J's on TikTok</span>
+            </a>
+        </div>
+        
+        
+
+</footer>
+</html>

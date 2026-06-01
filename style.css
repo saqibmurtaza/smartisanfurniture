@@ -1,0 +1,452 @@
+:root {
+    --surface: #faf9f7;
+    --surface-strong: #d3d3d3;
+    --text: #222;
+    --muted: #666;
+    --border: rgba(0, 0, 0, 0.12);
+    --shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+    --header-offset: 72px;
+    --content-width: min(1120px, calc(100% - 2rem));
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    padding-top: var(--header-offset) !important;
+    color: var(--text);
+    overflow-x: hidden;
+}
+
+body.menu-open {
+    overflow: hidden;
+}
+
+main {
+    width: var(--content-width);
+    margin: 0 auto;
+    padding: clamp(1rem, 2vw, 2rem) 0 3rem;
+}
+
+img,
+iframe {
+    display: block;
+    max-width: 100%;
+}
+
+img {
+    height: auto;
+}
+
+.menuContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    min-height: var(--header-offset);
+    padding: 0.75rem 1rem;
+    background: rgba(211, 211, 211, 0.96);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.itemMenu {
+    display: flex;
+    align-items: center;
+}
+
+.itemHeading {
+    padding: 0 !important;
+}
+
+.itemHeading h1 {
+    margin: 0;
+    font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+    line-height: 1.1;
+}
+
+.hamburger {
+    display: inline-flex !important;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0;
+    min-width: 48px;
+    min-height: 48px;
+    padding: 0 8px !important;
+}
+
+.bar {
+    width: 30px !important;
+    height: 3px !important;
+    margin: 4px 0 !important;
+}
+
+.menu {
+    top: calc(100% + 0.5rem) !important;
+    left: 1rem;
+    min-width: min(18rem, calc(100vw - 2rem));
+    padding: 0.5rem;
+    border-radius: 16px;
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+}
+
+.menu.active,
+.menu.is-open,
+.hamburger.active + .menu {
+    display: grid !important;
+    gap: 0.25rem;
+}
+
+.menu a {
+    border-radius: 10px;
+    padding: 0.9rem 1rem !important;
+}
+
+.menu a:hover,
+.menu a:focus-visible {
+    background: rgba(0, 0, 0, 0.05);
+    outline: none;
+}
+
+.submenu {
+    position: relative;
+}
+
+.submenu .sub-submenu {
+    top: 0 !important;
+    left: calc(100% + 0.5rem) !important;
+    min-width: 14rem;
+    padding: 0.5rem;
+    border-radius: 14px;
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+}
+
+.submenu.is-open .sub-submenu,
+.menu .submenu.active .sub-submenu {
+    display: grid !important;
+    gap: 0.25rem;
+}
+
+.text,
+.text1,
+.text2,
+#end,
+.about,
+.faq,
+.terms-and-conditions,
+.contact-info,
+.contact-form,
+.term,
+main > section,
+main > div {
+    max-width: 100%;
+}
+
+.about,
+.faq,
+.terms-and-conditions,
+.contact-info,
+.contact-form,
+.term {
+    width: min(100%, 800px);
+    margin-inline: auto;
+}
+
+.titleimgContainer {
+    max-height: min(70vh, 520px);
+    border-radius: 20px;
+}
+
+.slideshow-container {
+    max-width: min(100%, 720px) !important;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+#featured-products {
+    display: flex !important;
+    flex-direction: row;
+    gap: 1rem;
+    margin: 1rem 0 !important;
+    padding: 0 3rem 0 1rem !important; /* Increased right padding to partially hide last item */
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    white-space: nowrap !important;
+    -webkit-overflow-scrolling: touch; /* Enable smooth scrolling on iOS */
+    scrollbar-width: none; /* Hide scrollbar on Firefox */
+    -ms-overflow-style: none; /* Hide scrollbar on IE/Edge */
+    position: relative; /* For positioning the gradient */
+}
+
+#featured-products::-webkit-scrollbar {
+    display: none; /* Hide scrollbar on Webkit browsers */
+}
+
+#featured-products::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 100%;
+    background: linear-gradient(to left, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+    pointer-events: none; /* Prevent interference with scrolling */
+}
+
+.product {
+    width: 250px !important;
+    height: auto !important;
+    margin: 0 !important;
+    display: block !important;
+    border-radius: 18px;
+    flex-shrink: 0; /* Prevent products from shrinking */
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease-in-out;
+}
+    overflow: hidden;
+    aspect-ratio: 4 / 3;
+}
+
+.product-content,
+.product-content a,
+.product-content img {
+    height: 100%;
+}
+
+.product-content a {
+    display: grid;
+}
+
+.product-content img {
+    object-fit: cover;
+}
+
+.product-content img + img {
+    display: none;
+}
+
+.main-container {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+    align-items: start;
+}
+
+.image-container {
+    width: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.image-container .image-pair {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+.image-container .image-pair a {
+    width: auto !important;
+}
+
+.main-container-2 {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+    padding-left: 0 !important;
+}
+
+.image-container-2 {
+    width: auto !important;
+    max-width: none !important;
+    gap: 1rem;
+}
+
+.image-container-2 a {
+    width: auto !important;
+    margin: 0 !important;
+}
+
+.tables-container {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr));
+    gap: 1.25rem;
+    align-items: start !important;
+}
+
+.tables-img {
+    margin: 0 !important;
+    flex: initial !important;
+}
+
+.tables-img img,
+.image-container img,
+.image-container-2 img {
+    border-radius: 16px;
+}
+
+.tableProduct-content {
+    line-height: 1.35 !important;
+}
+
+.tableProduct-content p {
+    margin: 0.35rem 0 0 !important;
+}
+
+.miniContainer {
+    position: sticky !important;
+    top: var(--header-offset);
+    left: auto !important;
+    padding: 0.85rem 1rem !important;
+    margin: 0 auto 1rem !important;
+    width: var(--content-width) !important;
+    z-index: 10;
+    border-radius: 14px;
+    background-color: rgba(211, 211, 211, 0.88) !important;
+}
+
+.text1,
+.text2,
+#end {
+    padding-left: 0 !important;
+    text-align: center !important;
+}
+
+.footer-columns {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.5rem;
+    width: var(--content-width);
+    margin: 0 auto;
+    padding: 1.5rem 0 !important;
+}
+
+.footer-column {
+    margin-right: 0 !important;
+}
+
+.email-section,
+.social-icons {
+    width: var(--content-width);
+    margin: 0 auto;
+}
+
+.email-section .email-placeholder {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    padding-bottom: 1rem;
+}
+
+.email-placeholder input[type="email"] {
+    flex: 1 1 16rem;
+    width: auto !important;
+    margin-left: 0 !important;
+}
+
+.email-placeholder button[type="submit"] {
+    margin-left: 0 !important;
+}
+
+.social-icons {
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    padding: 0 0 1.5rem !important;
+}
+
+.hover-message {
+    transition-duration: 0.3s !important;
+}
+
+iframe#map,
+#map {
+    width: 100% !important;
+    min-height: min(70vh, 28rem);
+    border-radius: 18px;
+}
+
+.contact-form form,
+.contact-info {
+    display: grid;
+    gap: 0.75rem;
+}
+
+.tables-img,
+.product,
+.image-container,
+.image-container-2,
+.faq-item,
+.term {
+    content-visibility: auto;
+    contain-intrinsic-size: 320px;
+}
+
+@media (max-width: 900px) {
+    .main-container,
+    .main-container-2,
+    .footer-columns {
+        grid-template-columns: 1fr;
+    }
+
+    .submenu .sub-submenu {
+        position: static;
+        min-width: 0;
+        margin-top: 0.35rem;
+        background: rgba(211, 211, 211, 0.45);
+        box-shadow: none;
+    }
+}
+
+@media (max-width: 768px) {
+    :root {
+        --content-width: min(100%, calc(100% - 1rem));
+    }
+
+    .menu {
+        left: 0.5rem;
+        right: 0.5rem;
+        min-width: 0;
+        width: auto;
+    }
+
+    .submenu:hover .sub-submenu {
+        display: none;
+    }
+
+    .submenu.is-open .sub-submenu {
+        display: grid;
+    }
+
+    .image-container .image-pair {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 640px) {
+    main {
+        padding-top: 1rem;
+    }
+
+    .footer-columns {
+        grid-template-columns: 1fr;
+    }
+
+    .email-section .email-placeholder {
+        flex-direction: column;
+    }
+
+    .email-placeholder button[type="submit"] {
+        width: 100%;
+    }
+}
