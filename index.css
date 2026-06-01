@@ -172,35 +172,7 @@ img{
     margin: 0; /* Remove any margin around the p element */
 }
 /****************************** Menu End*******************/
-/******************************Slide Show*******************/
 
-.slideshow-container {
-    background-color: #FAF9F7;
-    max-width: 500px;
-    position: relative;
-    margin: auto;
-}
-
-/* Style for individual slides */
-.mySlides {
-    display: none;
-}
-
-/* Style for the slideshow navigation dots */
-.dot {
-    height: 10px;
-    width: 10px;
-    margin: 10px 2px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
-}
-
-/* Style for the active dot */
-.active {
-    background-color: #717171;
-}
 
 /******************************Slide Show End*******************/
 /***********************SCROLL BAR FEATURED PRODUCTS START***********************/

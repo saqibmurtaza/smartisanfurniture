@@ -168,12 +168,6 @@ main > div {
     border-radius: 20px;
 }
 
-.slideshow-container {
-    max-width: min(100%, 720px) !important;
-    border-radius: 20px;
-    overflow: hidden;
-}
-
 #featured-products {
     display: flex !important;
     flex-direction: row;
