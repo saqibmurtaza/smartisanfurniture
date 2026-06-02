@@ -226,7 +226,7 @@ main > div {
     position: relative;
 }
 
-.product-info {
+..product-info {
     position: absolute;
     left: 0;
     right: 0;
@@ -241,7 +241,6 @@ main > div {
     opacity: 0;
     transition: transform 0.25s ease, opacity 0.25s ease;
     pointer-events: none;
-    text-shadow: 0 1px 3px rgba(0,0,0,0.75);
 }
 
 .product:hover .product-info,
