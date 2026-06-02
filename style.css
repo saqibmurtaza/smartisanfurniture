@@ -168,7 +168,7 @@ main > div {
     border-radius: 20px;
 }
 
-#featured-products {
+#featured-products, #handcrafted-products {
     display: flex !important;
     flex-direction: row;
     gap: 1rem;
@@ -183,11 +183,13 @@ main > div {
     position: relative; /* For positioning the gradient */
 }
 
-#featured-products::-webkit-scrollbar {
+#featured-products::-webkit-scrollbar,
+#handcrafted-products::-webkit-scrollbar {
     display: none; /* Hide scrollbar on Webkit browsers */
 }
 
-#featured-products::after {
+#featured-products::after,
+#handcrafted-products::after {
     content: '';
     position: absolute;
     top: 0;

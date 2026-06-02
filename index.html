@@ -122,32 +122,59 @@
             <p>Your Style, Our Craftsmanship</p>
         </div>
         
-        <section class="image-slider">
-            <div class="slider">
-                <div class="slide">
-                    <a href="consoles.html">
-                        <img loading="lazy" decoding="async" src="selectedPics/C1.jpeg" alt="Handcrafted console table">
-                    </a>
+        <section id="handcrafted-products">
+            <div class="product">
+                <a href="accenttables.html">
+                    <img loading="lazy" decoding="async" src="https://res.cloudinary.com/dmoh0av6n/image/upload/q_auto/f_auto/v1778826664/ET-AB-05_main.jpg" alt="Elan Solid Wood End Table Oval">
+                </a>
+                <div class="product-info">
+                    <h3>Elan Solid Wood End Table Oval</h3>
+                    <p class="price"><span>Rs.29,999</span></p>
                 </div>
-                <div class="slide">
-                    <a href="livingroom.html">
-                        <img loading="lazy" decoding="async" src="selectedPics/BWT.png" alt="Handcrafted living room furniture">
-                    </a>
+            </div>
+            <div class="product">
+                <a href="accenttables.html">
+                    <img loading="lazy" decoding="async" src="https://res.cloudinary.com/dmoh0av6n/image/upload/q_auto/f_auto/v1778826675/ET-SR-07_2.jpg" alt="Opulent End Table">
+                </a>
+                <div class="product-info">
+                    <h3>Opulent End Table</h3>
+                    <p class="price"><span>Rs.34,999</span></p>
                 </div>
-                <div class="slide">
-                    <a href="accenttables.html">
-                        <img loading="lazy" decoding="async" src="selectedPics/ET12.webp" alt="Handcrafted accent table">
-                    </a>
+            </div>
+            <div class="product">
+                <a href="accenttables.html">
+                    <img loading="lazy" decoding="async" src="https://res.cloudinary.com/dmoh0av6n/image/upload/q_auto/f_auto/v1780214673/ET-BK-09_main.png" alt="Melas Minimalist Side Table">
+                </a>
+                <div class="product-info">
+                    <h3>Melas Minimalist Side Table</h3>
+                    <p class="price"><span>Rs.39,999</span></p>
                 </div>
-                <div class="slide">
-                    <a href="livingroom.html">
-                        <img loading="lazy" decoding="async" src="selectedPics/RTBRASS.jpeg" alt="Handcrafted brass detail furniture">
-                    </a>
+            </div>
+            <div class="product">
+                <a href="livingroom.html">
+                    <img loading="lazy" decoding="async" src="https://res.cloudinary.com/dmoh0av6n/image/upload/q_auto/f_auto/v1780249932/fr_ayna_wall_mirror_1_hg7j9s.jpg" alt="Ayna Wall Mirror">
+                </a>
+                <div class="product-info">
+                    <h3>Ayna Wall Mirror</h3>
+                    <p class="price"><span>Rs.54,999</span></p>
                 </div>
-                <div class="slide">
-                    <a href="livingroom.html">
-                        <img loading="lazy" decoding="async" src="selectedPics/CT2.webp" alt="Handcrafted leather sofa">
-                    </a>
+            </div>
+            <div class="product">
+                <a href="consoles.html">
+                    <img loading="lazy" decoding="async" src="https://res.cloudinary.com/dmoh0av6n/image/upload/q_auto/f_auto/v1780249377/SB-OV-23_2.png" alt="Zoro Artisan Sideboard">
+                </a>
+                <div class="product-info">
+                    <h3>Zoro Artisan Sideboard</h3>
+                    <p class="price"><span>Rs.179,999</span></p>
+                </div>
+            </div>
+            <div class="product">
+                <a href="livingroom.html">
+                    <img loading="lazy" decoding="async" src="https://res.cloudinary.com/dmoh0av6n/image/upload/q_auto/f_auto/v1778829384/CH-MQ-26_main.jpg" alt="Anstrich Chair">
+                </a>
+                <div class="product-info">
+                    <h3>Anstrich Chair</h3>
+                    <p class="price"><span>Rs.50,000</span></p>
                 </div>
             </div>
         </section>
@@ -208,7 +235,7 @@
         // Mobile product card click handler
         document.addEventListener('DOMContentLoaded', function() {
             const isMobile = () => window.innerWidth <= 768;
-            const productCards = document.querySelectorAll('#featured-products .product');
+            const productCards = document.querySelectorAll('#featured-products .product, #handcrafted-products .product');
 
             productCards.forEach(card => {
                 let overlayShown = false;
