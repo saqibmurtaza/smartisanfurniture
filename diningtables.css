@@ -97,11 +97,14 @@ body {
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     white-space: nowrap;
     padding: 10px;
-    left: 100%;
-    top: 0;
+    min-width: 14rem;
+    left: 0;
+    top: 100%;
+    z-index: 10;
 }
 
-.submenu:hover .sub-submenu {
+.submenu:hover .sub-submenu,
+.submenu .sub-submenu:hover {
     display: block;
 }
 
