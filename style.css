@@ -445,6 +445,20 @@ iframe#map,
     }
 }
 
+.submenu:hover .sub-submenu,
+.submenu .sub-submenu:hover {
+    display: block;
+}
+
+.submenu.is-open .sub-submenu {
+    display: block !important;
+}
+
+.submenu.force-closed .sub-submenu,
+.submenu.force-closed:hover .sub-submenu {
+    display: none !important;
+}
+
 @media (max-width: 768px) {
     :root {
         --content-width: min(100%, calc(100% - 1rem));

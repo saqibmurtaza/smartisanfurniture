@@ -102,7 +102,17 @@
         if (submenuLink && submenu) {
             submenuLink.addEventListener("click", function (event) {
                 event.preventDefault();
-                submenu.classList.toggle("is-open");
+                const isOpen = submenu.classList.toggle("is-open");
+
+                if (!isOpen) {
+                    submenu.classList.add("force-closed");
+                } else {
+                    submenu.classList.remove("force-closed");
+                }
+            });
+
+            submenu.addEventListener("mouseleave", function () {
+                submenu.classList.remove("force-closed");
             });
         }
 
