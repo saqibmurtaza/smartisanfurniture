@@ -232,7 +232,7 @@ main > div {
     right: 0;
     bottom: 0;
     padding: 1rem;
-    background: rgba(0, 0, 0, 0.3);
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent);
     color: #fff;
     text-align: left;
     display: grid;
