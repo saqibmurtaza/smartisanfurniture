@@ -101,10 +101,6 @@
 
         if (submenuLink && submenu) {
             submenuLink.addEventListener("click", function (event) {
-                if (window.innerWidth > 768) {
-                    return;
-                }
-
                 event.preventDefault();
                 submenu.classList.toggle("is-open");
             });
