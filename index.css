@@ -393,18 +393,54 @@ footer {
     padding-top: 10px;
     padding-bottom: 10px;
 }
-/* Styles for the email placeholder */
-.email-section .email-placeholder {
-    background-color: #D3D3D3;
+/* Footer contact cards */
+.footer-contact {
+    max-width: 980px;
+    margin: 0 auto;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
+    gap: 14px;
+    padding: 14px 18px;
+    background-color: #e8e8e8;
+    border-radius: 16px;
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.06);
+}
+.footer-contact a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 14px 18px;
+    background-color: #ffffff;
+    color: #111111;
+    text-decoration: none;
+    border-radius: 12px;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+}
+.footer-contact a:hover {
+    background-color: #f7f7f7;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 22px rgba(0, 0, 0, 0.12);
+}
+.footer-contact i {
+    font-size: 1.1rem;
+    color: #167d3b;
+}
+.footer-contact a[href^="mailto:"] i {
+    color: #2f6d9f;
+}
+.footer-contact span {
+    font-size: 0.95rem;
+    font-weight: 600;
 }
 
 .email-placeholder input[type="email"] {
     width: 50%;
     margin-left: 20px;
     padding: 15px;
-    border: 1px so #050505;
+    border: 1px solid #050505;
     color: #0b0b0b;
 }
 
