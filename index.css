@@ -29,6 +29,8 @@ body {
 
 .itemHeading {
     flex-grow: 1; /* Allow the heading to take up available space */
+    display: flex;
+    justify-content: center;
     text-align: center; /* Center-align the text */
     padding: 0 20px; /* Adjust padding as needed */
 }
