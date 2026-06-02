@@ -218,6 +218,52 @@ img{
     height: auto; /* Maintain image aspect ratio */
 }
 
+.image-slider {
+    margin: 10px;
+    padding: 10px 0;
+    background-color: white;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+}
+.image-slider .slider {
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+}
+.image-slider .slide {
+    flex: 0 0 auto;
+    width: 260px;
+    background-color: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
+    scroll-snap-align: start;
+}
+.image-slider .slide a {
+    display: block;
+}
+.image-slider .slide img {
+    width: 100%;
+    display: block;
+    height: auto;
+}
+.image-slider::-webkit-scrollbar {
+    height: 10px;
+}
+.image-slider::-webkit-scrollbar-track {
+    background-color: #f2f2f2;
+}
+.image-slider::-webkit-scrollbar-thumb {
+    background-color: #c2c2c2;
+    border-radius: 999px;
+}
+@media (max-width: 768px) {
+    .image-slider .slide {
+        width: 80vw;
+    }
+}
+
 /************* Four images in One Containers- - Start *****************/
 /*************************************************************/
 .main-container {
