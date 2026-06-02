@@ -232,14 +232,16 @@ main > div {
     right: 0;
     bottom: 0;
     padding: 1rem;
-    background: rgba(255, 255, 255, 0.96);
-    color: #111;
+    background: transparent;
+    color: #fff;
+    text-align: left;
     display: grid;
-    gap: 0.5rem;
+    gap: 0.25rem;
     transform: translateY(100%);
     opacity: 0;
     transition: transform 0.25s ease, opacity 0.25s ease;
     pointer-events: none;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.75);
 }
 
 .product:hover .product-info,
@@ -250,6 +252,13 @@ main > div {
 }
 
 .product-info h3 {
+    margin: 0;
+    text-align: left;
+    align-self: start;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
     margin: 0;
     font-size: 1rem;
     font-weight: 700;
