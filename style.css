@@ -222,12 +222,31 @@ main > div {
     display: block;
 }
 
+.product {
+    position: relative;
+}
+
 .product-info {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
     padding: 1rem;
-    background: #fff;
+    background: rgba(255, 255, 255, 0.96);
     color: #111;
     display: grid;
     gap: 0.5rem;
+    transform: translateY(100%);
+    opacity: 0;
+    transition: transform 0.25s ease, opacity 0.25s ease;
+    pointer-events: none;
+}
+
+.product:hover .product-info,
+.product:focus-within .product-info {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
 }
 
 .product-info h3 {
