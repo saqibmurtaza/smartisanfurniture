@@ -281,6 +281,28 @@ main > div {
     font-weight: 700;
 }
 
+@media (max-width: 768px) {
+    .product {
+        pointer-events: auto;
+    }
+
+    .product-info {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+
+    .product.mobile-overlay-shown .product-info {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@media (min-width: 769px) {
+    .product a {
+        pointer-events: auto;
+    }
+}
+
 .product-content img + img {
     display: none;
 }

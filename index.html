@@ -203,7 +203,45 @@
             </section>
         </div>
     </main>
-    <script src="index.js"></script> 
+    <script src="index.js"></script>
+    <script>
+        // Mobile product card click handler
+        document.addEventListener('DOMContentLoaded', function() {
+            const isMobile = () => window.innerWidth <= 768;
+            const productCards = document.querySelectorAll('#featured-products .product');
+
+            productCards.forEach(card => {
+                let overlayShown = false;
+
+                card.addEventListener('click', function(e) {
+                    if (!isMobile()) return;
+
+                    e.preventDefault();
+                    e.stopPropagation();
+
+                    if (!overlayShown) {
+                        // First click: show overlay
+                        card.classList.add('mobile-overlay-shown');
+                        overlayShown = true;
+                    } else {
+                        // Second click: navigate
+                        const link = card.querySelector('a');
+                        if (link) {
+                            window.location.href = link.href;
+                        }
+                    }
+                });
+
+                // Reset on outside click or when leaving card
+                document.addEventListener('click', function(e) {
+                    if (!card.contains(e.target) && overlayShown) {
+                        card.classList.remove('mobile-overlay-shown');
+                        overlayShown = false;
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 <!-- Footer -->
 <footer>
